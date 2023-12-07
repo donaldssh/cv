@@ -1,0 +1,162 @@
+\documentclass[11pt, a4paper]{moderncv}  
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% \renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+\usepackage[resetlabels,labeled]{multibib}
+\newcites{C}{Conferences}
+\newcites{J}{Journals}
+\newcites{P}{Preprints}
+
+
+\firstname{Donald}
+\familyname{Shenaj}
+\title{Ph.D Student}
+\address{Riccione, RN, Italy}
+\email{donald.shenaj@phd.unipd.it} 
+\homepage{donaldssh.github.io}
+
+\makeatletter
+\newcommand*{\dateofbirth}[1]{\def\@dateofbirth{#1}}
+\patchcmd{\makecvhead} % <cmd>
+  {\if@right\begin{tabular}[b]{@{}l@{}}\fi} % <search>
+  {\if@right\begin{tabular}[b]{@{}l@{}}\fi%
+   \ifthenelse{\isundefined{\@dateofbirth}}{}{\makenewline Date of birth: \@dateofbirth}%
+  } % <replace>
+  {}{} % <success><failure>
+\makeatother
+\dateofbirth{1997-10-20}
+\social[linkedin][linkedin.com/in/donald-shenaj-aaa5b51bb/]{donald-shenaj-aaa5b51bb}
+\social[googlescholar][scholar.google.com/citations?user=hK8OlqkAAAAJ]{donald shenaj}
+\social[github][github.com/donaldssh]{donaldssh}
+
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+
+
+\newcommand{\cvsplit}[3]{%
+  \cvlanguage{#1}{\parbox[t]{\maincolumnwidth}{#2}}{#3}%
+}
+
+\usepackage{footmisc} % for the footnote
+
+
+\begin{document}
+\vspace*{-5mm}
+\makecvtitle
+
+\vspace*{-5mm}
+\section{Research Interests}
+\cvsplit{}{%
+Federated Learning, Continual Learning, Domain Adaptation, Computer Vision
+}{}
+
+
+\section{Work Experience}
+\vspace{0.5em}
+\cvsplit{May. 2023 - Nov. 2023}{%
+\textbf{Visiting Researcher}, Mila - Quebec AI Institute \& Concordia University.\\
+Supervisor: Eugene Belilovsky.%
+}{}
+\vspace{0.3em}
+
+\cvsplit{Oct. 2021 - Present}{%
+\textbf{Teaching Assistant}, University of Padova.\\
+ M.Sc. courses: Computer Vision (22/23, 23/24), Scientific computing with python (22/23), Machine Learning (21/22, 23/24).%
+}{}
+\vspace{0.3em}
+
+\cvsplit{Mar. 2021 - August 2021}{%
+\textbf{Research Intern / Master Thesis}, University of Padova, Department of Information Engineering, MEDIA research group.\\
+Supervisor: Pietro Zanuttigh.%
+}{}
+\vspace{0.3em}
+
+\section{Education}
+\cvsplit{Oct. 2021 - Present}{%
+\textbf{Ph.D. in Information Engineering}, University of Padova, Department of Information Engineering, LTTM research group.\\
+Supervisor: Pietro Zanuttigh.\\
+Research topic: Federated Learning for Computer Vision.\\
+\textbf{Seasonal schools}: GTTI 2024, Mila GFlowNet 2023, CIFAR DL+RL 2023, GTTI 2023, IEEE/DEI SSIE 2022, GTTI 2022.%
+}{}
+\vspace{0.3em}
+
+\cvsplit{Oct. 2019 - Sept. 2021}{%
+\textbf{M.Sc. in ICT for Internet and Multimedia}, University of Padova.\\
+Grade: 110/110 cum Laude. \\
+Thesis: Coarse-to-Fine Learning for Semantic Segmentation across Multiple Domains.\\
+Supervisor: Pietro Zanuttigh.
+}{}
+\vspace{0.3em}
+
+\cvsplit{Sept. 2016 - Oct. 2019}{%
+\textbf{B.Sc. in Electronics Engineering for Energy and Information}, University of Bologna.\\
+Grade: 110/110 cum Laude. \\
+Thesis: Implementation and analysis of a vehicle counter system with Python and OpenCV.\\
+Supervisor: Enrico Paolini.
+}{}
+\vspace{0.3em}
+
+\cvsplit{Sept. 2011 - July 2016}{%
+\textbf{High School Diploma}, ITTS Leonardo Da Vinci, Rimini.\\
+Grade: 100/100.\\
+Thesis: Laser Harp with touch response.
+}{}
+
+
+\clearpage
+\section{Skills}
+\cvsplit{}{%
+\begin{itemize}
+\item Programming: C, C++, Python, Matlab/GNU Octave, Bash, VHDL, LabVIEW, Java, JavaScript
+\item Typesetting: \LaTeX, Markdown, HTML, CSS
+\item Scientific Computing: Numpy, SciPy, Pandas, Matplotlib, Scikit-learn
+\item Deep Learning: PyTorch, TensorFlow, Keras, OpenCV
+\item System: Linux, Git, HPC clusters, Slurm, Singularity, Docker
+\item Languages: Italian (Native), English (Professional), Albanian (Elementary), French (Elementary)
+\end{itemize}
+}{}
+
+
+\section{Interests}
+\cvitem{}{Programming, Rubik's Cubes, Music, TV Series, Skateboarding.}
+
+\section{Reviewer}
+\cvitem{}{IEEE TPAMI, IEEE TMM, Pattern Recognition, CVIU, MMSP2024, ICML 2023 Workshops, ICPR 2022}
+
+\section{Publications}
+
+\bibliographystyleJ{elsarticle-num}
+\nociteJ{*}
+\bibliographyJ{j}
+
+\bibliographystyleC{elsarticle-num}
+\nociteC{*}
+\bibliographyC{c}
+
+\bibliographystyleP{elsarticle-num}
+\nociteP{*}
+\bibliographyP{p}
+
+\small{ $\quad \quad\quad\quad\quad\quad \quad^*$ indicates equal contribution, $^\dag$ indicates equal supervision}
+
+\vfill
+\enlargethispage{\footskip}
+\textit{In compliance with the GDPR and the Italian Legislative Decree no. 196 dated 30/06/2003, I hereby authorize the processing of the personal data contained in this document.}
+
+
+\end{document}
