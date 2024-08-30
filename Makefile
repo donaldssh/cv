@@ -8,7 +8,7 @@ DOCNAME:
 	pdflatex $(DOCNAME).tex 
 	bibtex J.aux
 	bibtex C.aux
-	bibtex P.aux
+# 	bibtex P.aux
 	pdflatex $(DOCNAME).tex    
 	pdflatex $(DOCNAME).tex                     
 
