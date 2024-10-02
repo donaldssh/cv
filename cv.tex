@@ -4,11 +4,10 @@
 % \renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
-
 \usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -21,9 +20,9 @@
 
 \firstname{Donald}
 \familyname{Shenaj}
-\title{Ph.D Student}
-\address{Riccione, RN, Italy}
-\email{donald.shenaj@phd.unipd.it} 
+\title{AI Researcher}
+\address{London (UK)}
+\email{dshenaj@gmail.com}
 \homepage{donaldssh.github.io}
 
 \makeatletter
@@ -52,50 +51,59 @@
   \cvlanguage{#1}{\parbox[t]{\maincolumnwidth}{#2}}{#3}%
 }
 
-\usepackage{footmisc} % for the footnote
+\usepackage{footmisc} % for. the footnote
 
 
 \begin{document}
 \vspace*{-5mm}
 \makecvtitle
 
+% \renewcommand*{\addressfont}{\faMapMarker \hspace{0.5em}} % Define the font for address
+% \cvitem{}{\addressfont\address} % Display address
+
 \vspace*{-5mm}
 \section{Research Interests}
 \cvsplit{}{%
-Federated Learning, Continual Learning, Domain Adaptation, Computer Vision
+Federated Learning, Continual Learning, Domain Adaptation, Model Merging, Image Generation
 }{}
 
 
 \section{Work Experience}
-\vspace{0.5em}
-\cvsplit{May. 2023 - Nov. 2023}{%
+% \vspace{0.5em}
+\cvsplit{Oct. 2024 - Apr. 2025}{%
+\textbf{Research Intern}, Samsung Research UK.\\
+Supervisors: Umberto Michieli, Mete Ozay.%
+}{}
+\vspace{0.3em}
+
+\cvsplit{May 2023 - Nov. 2023}{%
 \textbf{Visiting Researcher}, Mila - Quebec AI Institute \& Concordia University.\\
 Supervisor: Eugene Belilovsky.%
 }{}
 \vspace{0.3em}
 
-\cvsplit{Oct. 2021 - Present}{%
+\cvsplit{Oct. 2021 - Sep. 2024}{%
 \textbf{Teaching Assistant}, University of Padova.\\
  M.Sc. courses: Computer Vision (22/23, 23/24), Scientific computing with python (22/23), Machine Learning (21/22, 23/24).%
 }{}
 \vspace{0.3em}
 
-\cvsplit{Mar. 2021 - August 2021}{%
+\cvsplit{Mar. 2021 - Aug. 2021}{%
 \textbf{Research Intern / Master Thesis}, University of Padova, Department of Information Engineering, MEDIA research group.\\
 Supervisor: Pietro Zanuttigh.%
 }{}
 \vspace{0.3em}
 
 \section{Education}
-\cvsplit{Oct. 2021 - Present}{%
+\cvsplit{Oct. 2021 - Mar. 2025}{%
 \textbf{Ph.D. in Information Engineering}, University of Padova, Department of Information Engineering, LTTM research group.\\
+Thesis: Morphing Distributed and Transfer Learning Paradigms for Visual Understanding. \\ Final reviewed version submitted on 2024/12/02.\\
 Supervisor: Pietro Zanuttigh.\\
-Research topic: Federated Learning for Computer Vision.\\
-\textbf{Seasonal schools}: GTTI 2024, Mila GFlowNet 2023, CIFAR DL+RL 2023, GTTI 2023, IEEE/DEI SSIE 2022, GTTI 2022.%
+\textbf{Seasonal schools}: IEEE-EURASIP S3P 2024, GTTI 2024, Mila GFlowNet 2023, CIFAR DL+RL 2023, GTTI 2023, IEEE-DEI SSIE 2022, GTTI 2022.%
 }{}
 \vspace{0.3em}
 
-\cvsplit{Oct. 2019 - Sept. 2021}{%
+\cvsplit{Oct. 2019 - Sep. 2021}{%
 \textbf{M.Sc. in ICT for Internet and Multimedia}, University of Padova.\\
 Grade: 110/110 cum Laude. \\
 Thesis: Coarse-to-Fine Learning for Semantic Segmentation across Multiple Domains.\\
@@ -103,7 +111,7 @@ Supervisor: Pietro Zanuttigh.
 }{}
 \vspace{0.3em}
 
-\cvsplit{Sept. 2016 - Oct. 2019}{%
+\cvsplit{Sep. 2016 - Oct. 2019}{%
 \textbf{B.Sc. in Electronics Engineering for Energy and Information}, University of Bologna.\\
 Grade: 110/110 cum Laude. \\
 Thesis: Implementation and analysis of a vehicle counter system with Python and OpenCV.\\
@@ -111,11 +119,11 @@ Supervisor: Enrico Paolini.
 }{}
 \vspace{0.3em}
 
-\cvsplit{Sept. 2011 - July 2016}{%
-\textbf{High School Diploma}, ITTS Leonardo Da Vinci, Rimini.\\
-Grade: 100/100.\\
-Thesis: Laser Harp with touch response.
-}{}
+% \cvsplit{Sept. 2011 - July 2016}{%
+% \textbf{High School Diploma}, ITTS Leonardo Da Vinci, Rimini.\\
+% Grade: 100/100.\\
+% Thesis: Laser Harp with touch response.
+% }{}
 
 
 \clearpage
@@ -123,35 +131,36 @@ Thesis: Laser Harp with touch response.
 \cvsplit{}{%
 \begin{itemize}
 \item Programming: C, C++, Python, Matlab/GNU Octave, Bash, VHDL, LabVIEW, Java, JavaScript
-\item Typesetting: \LaTeX, Markdown, HTML, CSS
-\item Scientific Computing: Numpy, SciPy, Pandas, Matplotlib, Scikit-learn
-\item Deep Learning: PyTorch, TensorFlow, Keras, OpenCV
+\item Typesetting: \LaTeX, Manim, Markdown, HTML, CSS
+\item Libraries: PyTorch, TensorFlow, Keras, OpenCV, Numpy, SciPy, Pandas, Matplotlib, Scikit-learn
 \item System: Linux, Git, HPC clusters, Slurm, Singularity, Docker
 \item Languages: Italian (Native), English (Professional), Albanian (Elementary), French (Elementary)
 \end{itemize}
 }{}
 
-
+% \clearpage
 \section{Interests}
-\cvitem{}{Programming, Rubik's Cubes, Music, TV Series, Skateboarding.}
+\cvitem{}{Programming, Rubik's Cubes, Music, Movies/TV Series, Skateboarding.}
 
 \section{Reviewer}
-\cvitem{}{IEEE TPAMI, IEEE TMM, Pattern Recognition, CVIU, MMSP2024, ICML 2023 Workshops, ICPR 2022}
+\cvitem{}{CVPR 2025, WACV 2025, IEEE TPAMI, IEEE TMM, Pattern Recognition, CVIU, MMSP 2024, ICML 2023 Workshops, ICPR 2022, Harms and Risks of AI in the Military (HRAIM)}
 
 \section{Publications}
 
-\bibliographystyleJ{elsarticle-num}
-\nociteJ{*}
-\bibliographyJ{j}
+
+\bibliographystyleP{elsarticle-num}
+\nociteP{*}
+\bibliographyP{p}
 
 \bibliographystyleC{elsarticle-num}
 \nociteC{*}
 \bibliographyC{c}
 
-% \bibliographystyleP{elsarticle-num}
-% \nociteP{*}
-% \bibliographyP{p}
+\bibliographystyleJ{elsarticle-num}
+\nociteJ{*}
+\bibliographyJ{j}
 
+\vspace{-1.2mm}
 \small{ $\quad \quad\quad\quad\quad\quad \quad^*$ indicates equal contribution, $^\dag$ indicates equal supervision}
 
 \vfill
