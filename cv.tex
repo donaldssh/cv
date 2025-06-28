@@ -1,7 +1,8 @@
-\documentclass[11pt, a4paper]{moderncv}  
+\documentclass[11pt, a4paper]{moderncv}
 \moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 % \renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 \usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
@@ -11,15 +12,23 @@
 %\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+% \usepackage[hidelinks]{hyperref} % placeholder; will override later
+
+\usepackage[dvipsnames]{xcolor}
 
 \usepackage[resetlabels,labeled]{multibib}
 \newcites{C}{Conferences}
 \newcites{J}{Journals}
-\newcites{P}{Preprints}
+% \newcites{P}{Preprints}
+
+\renewcommand{\refnameC}{\textcolor{ForestGreen}{Conferences}}
+\renewcommand{\refnameJ}{\textcolor{ForestGreen}{Journals}}
+% \renewcommand{\refnameP}{\textcolor{ForestGreen}{Preprints}}
 
 
-\firstname{Donald}
-\familyname{Shenaj}
+
+\firstname{\textcolor{black}{Donald} }
+\familyname{ Shenaj}
 \title{Postdoctoral Researcher}
 % \address{London (UK)}
 \email{dshenaj@gmail.com}
@@ -55,6 +64,14 @@
 
 
 \begin{document}
+\hypersetup{
+  colorlinks=false,
+  pdfborder={0 0 1}, % visible border width
+  linkbordercolor={1 0 0}, % RGB red
+  urlbordercolor={1 0 0},
+  citebordercolor={1 0 0}
+}
+
 \vspace*{-5mm}
 \makecvtitle
 
@@ -62,55 +79,52 @@
 % \cvitem{}{\addressfont\address} % Display address
 
 \vspace*{-5mm}
-\section{Research Interests}
+\section{\textcolor{ForestGreen}{Research Interests}}
 \cvsplit{}{%
-Federated Learning, Continual Learning, Domain Adaptation, Model Merging, Image Generation, LLMs
+Model Merging, Model Patching, Image Generation, LLMs, Federated Learning, Continual Learning, Domain Adaptation.
 }{}
 
 
-\section{Work Experience}
+\section{\textcolor{ForestGreen}{Work Experience}}
 
 \cvsplit{May 2025 - Now}{%
-\textbf{Postdoctoral Researcher}, University of Pisa\\
+\textbf{Postdoctoral Researcher}, University of Pisa, Italy.\\
+CoEvolution (EU Horizon Europe) – Adaptive AI for Evolving Cybersecurity Threats.%
 }{}
 \vspace{0.3em}
 
 \cvsplit{Oct. 2024 - Apr. 2025}{%
-\textbf{Research Intern}, Samsung Research UK.\\
+\textbf{Research Intern}, Samsung Research, UK.\\
 Supervisors: Umberto Michieli, Mete Ozay.%
 }{}
 \vspace{0.3em}
 
 \cvsplit{May 2023 - Nov. 2023}{%
-\textbf{Visiting Researcher}, Mila - Quebec AI Institute \& Concordia University.\\
+\textbf{Visiting Researcher}, Mila - Quebec AI Institute \& Concordia University, Canada.\\
 Supervisor: Eugene Belilovsky.%
 }{}
 \vspace{0.3em}
 
 \cvsplit{Oct. 2021 - Sep. 2024}{%
-\textbf{Teaching Assistant}, University of Padova.\\
+\textbf{Teaching Assistant}, University of Padova, Italy.\\
  M.Sc. courses: Computer Vision (22/23, 23/24), Scientific computing with python (22/23), Machine Learning (21/22, 23/24).%
 }{}
 \vspace{0.3em}
 
-% \cvsplit{Mar. 2021 - Aug. 2021}{%
-% \textbf{Research Intern / Master Thesis}, University of Padova, Department of Information Engineering, MEDIA research group.\\
-% Supervisor: Pietro Zanuttigh.%
-% }{}
-% \vspace{0.3em}
 
-\section{Education}
+\section{\textcolor{ForestGreen}{Education}}
 \cvsplit{Oct. 2021 - Mar. 2025}{%
-\textbf{Ph.D. in Information Engineering}, University of Padova, MEDIA research group.\\
+\textbf{Ph.D. in Information Engineering}, University of Padova, Italy.\\
 Thesis: Morphing Distributed and Transfer Learning Paradigms for Visual Understanding. \\
 Succesfully defended on 2025/03/24.\\
 Supervisor: Pietro Zanuttigh.\\
-\textbf{Seasonal schools}: IEEE-EURASIP S3P 2024, GTTI 2024, Mila GFlowNet 2023, CIFAR DL+RL 2023, GTTI 2023, IEEE-DEI SSIE 2022, GTTI 2022.%
+\textbf{Seasonal schools}: IEEE-EURASIP S3P 2024, GTTI 2024, Mila GFlowNet 2023, CIFAR DL+RL 2023, GTTI 2023, IEEE-DEI SSIE 2022, GTTI 2022. \\
+\textbf{Co-Advised}: More than 10 Master's and Bachelor's theses.%
 }{}
 \vspace{0.3em}
 
 \cvsplit{Oct. 2019 - Sep. 2021}{%
-\textbf{M.Sc. in ICT for Internet and Multimedia}, University of Padova.\\
+\textbf{M.Sc. in ICT for Internet and Multimedia}, University of Padova, Italy.\\
 Grade: 110/110 cum Laude. \\
 Thesis: Coarse-to-Fine Learning for Semantic Segmentation across Multiple Domains.\\
 Supervisor: Pietro Zanuttigh.
@@ -118,7 +132,7 @@ Supervisor: Pietro Zanuttigh.
 \vspace{0.3em}
 
 \cvsplit{Sep. 2016 - Oct. 2019}{%
-\textbf{B.Sc. in Electronics Engineering for Energy and Information}, University of Bologna.\\
+\textbf{B.Sc. in Electronics Engineering}, University of Bologna, Italy.\\
 Grade: 110/110 cum Laude. \\
 Thesis: Implementation and analysis of a vehicle counter system with Python and OpenCV.\\
 Supervisor: Enrico Paolini.
@@ -136,10 +150,10 @@ Supervisor: Enrico Paolini.
 % \clearpage
 
 % \clearpage
-\section{Skills}
+\section{\textcolor{ForestGreen}{Skills}}
 \cvsplit{}{%
 \begin{itemize}
-\item Programming: C, C++, Python, Matlab/GNU Octave, Bash, VHDL, LabVIEW, Java, JavaScript
+\item Programming: C, C++, Python, Matlab/GNU Octave, CUDA, Bash, VHDL, LabVIEW, Java, JavaScript
 \item Typesetting: \LaTeX, Manim, Markdown, HTML, CSS
 \item Libraries: PyTorch, TensorFlow, Keras, OpenCV, Numpy, SciPy, Pandas, Matplotlib, Scikit-learn
 \item System: Linux, Git, HPC clusters, Slurm, Singularity, Docker
@@ -147,22 +161,22 @@ Supervisor: Enrico Paolini.
 \end{itemize}
 }{}
 
-
-\section{Interests}
+\clearpage
+\section{\textcolor{ForestGreen}{Interests}}
 \cvitem{}{Programming, Rubik's Cubes, Music, Movies/TV Series, Skateboarding, Street art}
 
 
 
 
-\section{Reviewer}
-\cvitem{}{ICCV 2025, CVPR 2025 (Outstanding Reviewer), ICLR Workshops 2025, CVPR Workshops 2025, WACV 2025, IEEE TPAMI, IEEE TMM, Pattern Recognition, CVIU, MMSP 2024, ICML 2023 Workshops, ICPR 2022, Harms and Risks of AI in the Military (HRAIM)}
+\section{\textcolor{ForestGreen}{Reviewer}}
+\cvitem{}{ICCV 2025, \href{https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee\#all-outstanding-reviewer}{CVPR 2025 (Outstanding Reviewer, top 5\% of 12,593 reviewers)}, ICLR Workshops 2025, CVPR Workshops 2025, WACV 2025, IEEE TPAMI, IEEE TMM, Pattern Recognition, CVIU, MMSP 2024, ICML 2023 Workshops, ICPR 2022, Harms and Risks of AI in the Military (HRAIM)}
 
-\section{Publications}
+\section{\textcolor{ForestGreen}{Publications}}
 
 
-\bibliographystyleP{elsarticle-num}
-\nociteP{*}
-\bibliographyP{p}
+% \bibliographystyleP{elsarticle-num}
+% \nociteP{*}
+% \bibliographyP{p}
 
 \bibliographystyleC{elsarticle-num}
 \nociteC{*}
@@ -172,7 +186,7 @@ Supervisor: Enrico Paolini.
 \nociteJ{*}
 \bibliographyJ{j}
 
-\vspace{-1.2mm}
+\vspace{3mm}
 \small{ $\quad \quad\quad\quad\quad\quad \quad^*$ indicates equal contribution, $^\dag$ indicates equal supervision}
 
 \vfill
