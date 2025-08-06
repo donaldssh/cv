@@ -1,5 +1,6 @@
 \documentclass[11pt, a4paper]{moderncv}
-\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+% \moderncvstyle{banking}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}
 \moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 % \renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 
@@ -19,11 +20,11 @@
 \usepackage[resetlabels,labeled]{multibib}
 \newcites{C}{Conferences}
 \newcites{J}{Journals}
-% \newcites{P}{Preprints}
+\newcites{P}{Preprints}
 
 \renewcommand{\refnameC}{\textcolor{ForestGreen}{Conferences}}
 \renewcommand{\refnameJ}{\textcolor{ForestGreen}{Journals}}
-% \renewcommand{\refnameP}{\textcolor{ForestGreen}{Preprints}}
+\renewcommand{\refnameP}{\textcolor{ForestGreen}{Preprints}}
 
 
 
@@ -43,7 +44,7 @@
   } % <replace>
   {}{} % <success><failure>
 \makeatother
-\dateofbirth{1997-10-20}
+% \dateofbirth{1997-10-20}
 \social[linkedin][linkedin.com/in/donald-shenaj-aaa5b51bb/]{donald-shenaj-aaa5b51bb}
 \social[googlescholar][scholar.google.com/citations?user=hK8OlqkAAAAJ]{donald shenaj}
 \social[github][github.com/donaldssh]{donaldssh}
@@ -116,7 +117,7 @@ Supervisor: Eugene Belilovsky.%
 \cvsplit{Oct. 2021 - Mar. 2025}{%
 \textbf{Ph.D. in Information Engineering}, University of Padova, Italy.\\
 Thesis: Morphing Distributed and Transfer Learning Paradigms for Visual Understanding. \\
-Succesfully defended on 2025/03/24.\\
+Successfully defended on 2025/03/24.\\
 Supervisor: Pietro Zanuttigh.\\
 \textbf{Seasonal schools}: IEEE-EURASIP S3P 2024, GTTI 2024, Mila GFlowNet 2023, CIFAR DL+RL 2023, GTTI 2023, IEEE-DEI SSIE 2022, GTTI 2022. \\
 \textbf{Co-Advised}: More than 10 Master's and Bachelor's theses.%
@@ -169,14 +170,14 @@ Supervisor: Enrico Paolini.
 
 
 \section{\textcolor{ForestGreen}{Reviewer}}
-\cvitem{}{ICCV 2025, \href{https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee\#all-outstanding-reviewer}{CVPR 2025 (Outstanding Reviewer, top 5\% of 12,593 reviewers)}, ICLR Workshops 2025, CVPR Workshops 2025, WACV 2025, IEEE TPAMI, IEEE TMM, Pattern Recognition, CVIU, MMSP 2024, ICML 2023 Workshops, ICPR 2022, Harms and Risks of AI in the Military (HRAIM)}
+\cvitem{}{ICCV 2025, \href{https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee\#all-outstanding-reviewer}{CVPR 2025 (Outstanding Reviewer, top 5\% of 12,593 reviewers)}, AAAI 2025, ICLR Workshops 2025, CVPR Workshops 2025, WACV 2025, IEEE TPAMI, IEEE TMM, Pattern Recognition, CVIU, MMSP 2024, ICML 2023 Workshops, ICPR 2022, \href{https://www.harms-risks-ai-military.org/acknowledgment}{Harms and Risks of AI in the Military (HRAIM)}}
 
 \section{\textcolor{ForestGreen}{Publications}}
 
 
-% \bibliographystyleP{elsarticle-num}
-% \nociteP{*}
-% \bibliographyP{p}
+\bibliographystyleP{elsarticle-num}
+\nociteP{*}
+\bibliographyP{p}
 
 \bibliographystyleC{elsarticle-num}
 \nociteC{*}
